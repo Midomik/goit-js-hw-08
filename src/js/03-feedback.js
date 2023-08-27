@@ -18,6 +18,7 @@ const writeFeedbaack = () => {
  
 const fillField = (lS) =>{
    const localInfo = JSON.parse(lS.getItem("feedback-form-state"));
+   console.log(localInfo);
         if(localInfo.email){
             inputEl.value=localInfo.email;
             // console.log("input ok")
