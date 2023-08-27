@@ -18,11 +18,11 @@ const writeFeedbaack = () => {
  
 const fillField = (lS) =>{
    const localInfo = JSON.parse(lS.getItem("feedback-form-state"));
-        if(localInfo.email.trim()){
+        if(localInfo.email){
             inputEl.value=localInfo.email;
             // console.log("input ok")
         } 
-        if(localInfo.message.trim()){
+        if(localInfo.message){
             textareaEl.value=localInfo.message;
             // console.log("area ok");
         } 
