@@ -15,10 +15,14 @@ const writeFeedbaack = () => {
     // console.log(objectInfo);
     localStorage.setItem("feedback-form-state", JSON.stringify(objectInfo))
 }
- 
-const fillField = (lS) =>{
-   const localInfo = JSON.parse(lS.getItem("feedback-form-state"));
-   console.log(localInfo);
+
+
+
+
+
+const fillField = () =>{
+   const localInfo= JSON.parse(localStorage.getItem("feedback-form-state"));
+//  console.log(localInfo);
         if(localInfo.email){
             inputEl.value=localInfo.email;
             // console.log("input ok")
@@ -29,16 +33,21 @@ const fillField = (lS) =>{
         } 
 }
 
+
+
 const formSubmit = (e) => {
     e.preventDefault();
-
-    console.log(JSON.parse(localStorage.getItem("feedback-form-state")));
+    if (inputEl.value==="" || textareaEl.value==="") {
+        return alert("Please, fill in all fields!!!");
+       }
+    const finalObject=JSON.parse(localStorage.getItem("feedback-form-state"));
+    console.log(finalObject);
     e.currentTarget.reset();
     localStorage.removeItem("feedback-form-state");
 }
 
 
-fillField(localStorage);
+fillField();
 
 formEl.addEventListener("input", throttle(writeFeedbaack,500));
 formEl.addEventListener("submit", formSubmit);
