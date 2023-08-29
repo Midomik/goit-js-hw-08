@@ -23,11 +23,11 @@ console.log(localInfo);
 const fillField = () =>{
    
 //  console.log(localInfo);
-        if(localInfo.email!=="null"){
+        if(localInfo.email){
             inputEl.value=localInfo.email;
             // console.log("input ok")
         } 
-        if(localInfo.message!=="null"){
+        if(localInfo.message){
             textareaEl.value=localInfo.message;
             // console.log("area ok");
         } 
