@@ -13,12 +13,12 @@ const writeFeedbaack = () => {
     objectInfo.email=inputEl.value;
     objectInfo.message=textareaEl.value;
     // console.log(objectInfo);
-    localStorage.setItem("feedback-form-state", JSON.stringify(objectInfo))
+    localStorage.setItem("feedback-form-state", JSON.stringify(objectInfo));
 }
 
 
 
-const localInfo= JSON.parse(localStorage.getItem("feedback-form-state"));
+const localInfo= JSON.parse(localStorage.getItem("feedback-form-state")) || {};
 console.log(localInfo);
 const fillField = () =>{
    
