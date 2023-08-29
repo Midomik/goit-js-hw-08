@@ -19,15 +19,15 @@ const writeFeedbaack = () => {
 
 
 const localInfo= JSON.parse(localStorage.getItem("feedback-form-state")) || {};
-console.log(localInfo);
+
 const fillField = () =>{
    
 //  console.log(localInfo);
-        if(localInfo.email){
+        if(localInfo.email && localInfo.email!=="undefined"){
             inputEl.value=localInfo.email;
-            // console.log("input ok")
+            console.log("input ok")
         } 
-        if(localInfo.message){
+        if(localInfo.message && localInfo.message!=="undefined"){
             textareaEl.value=localInfo.message;
             // console.log("area ok");
         } 
