@@ -25,7 +25,7 @@ const fillField = () =>{
 //  console.log(localInfo);
         if(localInfo.email && localInfo.email!=="undefined"){
             inputEl.value=localInfo.email;
-            console.log("input ok")
+            //console.log("input ok")
         } 
         if(localInfo.message && localInfo.message!=="undefined"){
             textareaEl.value=localInfo.message;
